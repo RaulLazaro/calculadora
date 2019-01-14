@@ -16,17 +16,28 @@ html, body {
 .calculator__screen {
   flex: 1 1 auto;
   padding: 1rem;
-  text-align: right;
   background: WhiteSmoke;
   font-size: 2em;
   overflow-y: auto;
   height: auto;
   -webkit-mask-image: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  white-space: pre;
+  display: flex;
+  flex-direction: column;
+  align-content:flex-end;
 }
 
 .calculator__screen p {
+  text-align: right;
+  margin-left: auto;
   margin-top: auto;
   margin-bottom: 0;
+}
+
+.screen__result {
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0, 0.20);
+  display: none;
 }
 
 .calculator__keys {

@@ -10,14 +10,11 @@
 
 <body>
   <div class="calculator">
-    <div class="calculator__screen">
-      <p>1</p>
-      <br>
-      <p>1</p>
-      <br>
-      <p>1</p>
+    <div class="calculator__screen", id="calculator__screen">
+      <p class="screen__current", id="screen__current"></p>
+      <p class="screen__result", id="screen__result"></p>
     </div>
-    <div class="calculator__keys">
+    <div class="calculator__keys", id="calculator__keys">
       <button data-operation="clear"></button>
       <button data-operation="clear">C</button>
       <button data-operation="erase"><-</button>
@@ -41,6 +38,7 @@
       <button data-operation="equal">=</button>
     </div>
   </div>
+  <script src="calculator.js"></script>
 </body>
 
 </html>
