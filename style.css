@@ -53,6 +53,13 @@ button:focus {
   outline:0;
 }
 
+@media (hover:hover) {
+    button:hover{
+      background: rgb(0, 0, 0, 0.20);
+      outline: 0;
+    }
+}
+
 button:active {
   background: rgb(0, 0, 0, 0.20);
   outline: 0;
