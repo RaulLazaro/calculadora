@@ -10,6 +10,7 @@ html, body {
   max-width: 400px;
   display: flex;
   flex-flow: column;
+  border: 2px WhiteSmoke solid;
 }
 
 .calculator__screen {
@@ -35,7 +36,6 @@ html, body {
   grid-auto-rows: 1fr;
   grid-gap: 2px;
   background: WhiteSmoke;
-  border: 2px WhiteSmoke solid;
 }
 
 .calculator__keys :first-child {
