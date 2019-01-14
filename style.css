@@ -20,7 +20,7 @@ html, body {
   font-size: 2em;
   overflow-y: auto;
   height: auto;
-  -webkit-mask-image: -webkit-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+  -webkit-mask-image: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
 }
 
 .calculator__screen p {
@@ -51,14 +51,18 @@ button {
 }
 
 button:focus {
-  outline:0;
+  outline: 0;
 }
 
 @media (hover:hover) {
-    button:hover{
-      background: rgb(0, 0, 0, 0.20);
-      outline: 0;
-    }
+  button:hover {
+    background: rgb(0, 0, 0, 0.20);
+    outline: 0;
+  }
+
+  [data-operation="equal"]:hover {
+    background: chocolate;
+  }
 }
 
 button:active {
@@ -77,6 +81,6 @@ button:active {
   color: white;
 }
 
-[data-operation="equal"]:hover, [data-operation="equal"]:active {
+[data-operation="equal"]:active {
   background: chocolate;
 }
