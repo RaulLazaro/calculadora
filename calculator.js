@@ -40,15 +40,30 @@ const getOperation = operation => {
         current.textContent = current.textContent.substring(0, current.textContent.length - 3) :
         current.textContent = current.textContent.substring(0, current.textContent.length - 1)
       break;
-    case 'percentaje':
-
+    case 'percentage':
+      var position = current.textContent.lastIndexOf(' ')
+      if (position) {
+        var number = Number(current.textContent.substring(position, current.textContent.length))
+        number = number/100
+        current.textContent = current.textContent.substring(0, position + 1,) + number
+      }
+      else
+       {
+        var number = Number(current.textContent)
+        number = number/100
+        current.textContent = number
+      }
       break;
     case 'equal':
-
+      current.textContent = result.textContent
       break;
     default:
 
   }
+}
+
+const getResult = () => {
+
 }
 
 calculator()
