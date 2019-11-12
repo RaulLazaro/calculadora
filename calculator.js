@@ -18,10 +18,15 @@ function pulse(text) {
   screen.scrollTop = screen.scrollHeight;
 }
 
-function clearScreen() {
+function clearCurrent() {
   current.textContent = "0";
   result.textContent = "";
   result.style.display = "none";
+}
+
+function clearScreen(){
+  clearCurrent()
+  last.textContent="";
 }
 
 function erase() {
