@@ -85,9 +85,12 @@ button:active {
   outline: 0;
 }
 
-.clear {
+.first {
   grid-column: 1;
   grid-row: 1;
+}
+
+.clear{
   color: darkorange;
 }
 
