@@ -5,13 +5,17 @@ const result = document.getElementById("screen__result");
 const keys = document.getElementById("calculator__keys");
 
 function pulse(text) {
-  if (current.textContent =="0")
-    current.textContent = text;
-  else
-    current.textContent += text;
-  result.textContent = "= " + eval(current.textContent);
+  if (current.textContent == "0") current.textContent = text;
+  else current.textContent += text;
+  try {
+    result.textContent = "= " + eval(current.textContent);
+  } catch (e) {
+    if (e instanceof SyntaxError) {
+      result.textContent = "= " + eval(current.textContent.slice(0, -1));
+    }
+  }
   result.style.display = "block";
-  screen.scrollTop = screen.scrollHeight
+  screen.scrollTop = screen.scrollHeight;
 }
 
 function clearScreen() {
@@ -21,14 +25,19 @@ function clearScreen() {
 }
 
 function erase() {
-  if (current.textContent != "0" && current.textContent.length == 1){
+  if (current.textContent != "0" && current.textContent.length == 1) {
     current.textContent = "0";
     result.textContent = "";
     result.style.display = "none";
-  }
-  else {
+  } else {
     current.textContent = current.textContent.slice(0, -1);
-    result.textContent = "= " + eval(current.textContent);
+    try {
+      result.textContent = "= " + eval(current.textContent);
+    } catch (e) {
+      if (e instanceof SyntaxError) {
+        result.textContent = "= " + eval(current.textContent.slice(0, -1));
+      }
+    }
   }
 }
 
@@ -37,5 +46,5 @@ function equal() {
   current.textContent = result.textContent.slice(2);
   result.textContent = "";
   result.style.display = "none";
-  screen.scrollTop = screen.scrollHeight
+  screen.scrollTop = screen.scrollHeight;
 }
