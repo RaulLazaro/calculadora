@@ -2,7 +2,6 @@ const screen = document.getElementById("calculator__screen");
 const last = document.getElementById("screen__last");
 const current = document.getElementById("screen__current");
 const result = document.getElementById("screen__result");
-const keys = document.getElementById("calculator__keys");
 
 function pulse(text) {
   if (current.textContent == "0") current.textContent = text;
