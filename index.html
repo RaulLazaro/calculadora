@@ -11,31 +11,32 @@
 <body>
   <div class="calculator">
     <div class="calculator__screen", id="calculator__screen">
-      <p class="screen__current", id="screen__current"></p>
-      <p class="screen__result", id="screen__result">= </p>
+      <p class="screen__last", id="screen__last"></p>
+      <p class="screen__current", id="screen__current">0</p>
+      <p class="screen__result", id="screen__result"></p>
     </div>
     <div class="calculator__keys", id="calculator__keys">
-      <button data-operation="clear"></button>
-      <button data-operation="clear">C</button>
-      <button data-operation="erase"><-</button>
-      <button data-operation="percentage">%</button>
-      <button data-math="divide">/</button>
-      <button data-number="7">7</button>
-      <button data-number="8">8</button>
-      <button data-number="9">9</button>
-      <button data-math="multiply">x</button>
-      <button data-number="4">4</button>
-      <button data-number="5">5</button>
-      <button data-number="6">6</button>
-      <button data-math="minus">-</button>
-      <button data-number="1">1</button>
-      <button data-number="2">2</button>
-      <button data-number="3">3</button>
-      <button data-math="add">+</button>
+      <button class="clear"></button>
+      <button class="clear" onclick="clearScreen()">C</button>
+      <button onclick="erase()"><-</button>
+      <button onclick="pulse('%')">%</button>
+      <button onclick="pulse('/')">/</button>
+      <button onclick="pulse('7')">7</button>
+      <button onclick="pulse('8')">8</button>
+      <button onclick="pulse('9')">9</button>
+      <button onclick="pulse('*')">x</button>
+      <button onclick="pulse('4')">4</button>
+      <button onclick="pulse('5')">5</button>
+      <button onclick="pulse('6')">6</button>
+      <button onclick="pulse('-')">-</button>
+      <button onclick="pulse('1')">1</button>
+      <button onclick="pulse('2')">2</button>
+      <button onclick="pulse('3')">3</button>
+      <button onclick="pulse('+')">+</button>
       <button></button>
-      <button data-number="0">0</button>
-      <button data-number=".">.</button>
-      <button data-operation="equal">=</button>
+      <button onclick="pulse('0')">0</button>
+      <button onclick="pulse('.')">.</button>
+      <button class="equal" onclick="equal()">=</button>
     </div>
   </div>
   <script src="calculator.js"></script>
