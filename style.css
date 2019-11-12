@@ -20,7 +20,6 @@ html, body {
   font-size: 2em;
   overflow-y: auto;
   height: auto;
-  -webkit-mask-image: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
   white-space: pre;
   display: flex;
   flex-direction: column;
@@ -32,6 +31,11 @@ html, body {
   margin-left: auto;
   margin-top: auto;
   margin-bottom: 0;
+}
+
+.screen__last {
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0, 0.20);
 }
 
 .screen__result {
@@ -81,17 +85,17 @@ button:active {
   outline: 0;
 }
 
-[data-operation="clear"] {
+.clear {
   grid-column: 1;
   grid-row: 1;
   color: darkorange;
 }
 
-[data-operation="equal"] {
+.equal {
   background: darkorange;
   color: white;
 }
 
-[data-operation="equal"]:active {
+.equal:active {
   background: chocolate;
 }
