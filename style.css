@@ -26,19 +26,28 @@ html, body {
   align-content:flex-end;
 }
 
-.calculator__screen p {
+
+.screen__current {
   text-align: right;
   margin-left: auto;
-  margin-top: auto;
+  margin-top: 0;
   margin-bottom: 0;
 }
 
 .screen__last {
+  text-align: right;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: 0;
   font-size: 1.5rem;
   color: rgb(0, 0, 0, 0.20);
 }
 
 .screen__result {
+  text-align: right;
+  margin-left: auto;
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: 1.5rem;
   color: rgb(0, 0, 0, 0.20);
   display: none;
